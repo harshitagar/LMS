@@ -1,0 +1,77 @@
+html>
+	<title>Home</title>
+	<header>
+	<nav class="topnav">
+		LMS<sub>Library Management System</sub>
+		<a href="login.html" style="float:right; font-size:20;padding-right:50px;color:white">Login</a>
+		<a href="home.html" style="float:right; font-size:20;padding-right:55px;color:white">Home</a>
+	</nav>
+	<link href="style.css" rel="stylesheet" />
+	</header>
+	<br>
+	<br>
+	<br>
+	
+	<body  style="background-image:url();margin-right: 0px;margin-left: 0px; background:#d6ccca;">
+	
+	<img src="library3.bmp" height="500" width="1950"></img>
+		
+	<nav style="background-color:#e64626;">
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li><a class="active" href="gallery.html">Gallery</a></li>
+				<li><a href="#Bot">Contact</a></li>
+				<li><a href="#Bot">About</a></li>
+			</ul>
+	</nav>
+	<style>
+		.slide{display:none;}
+	</style>
+	
+	<center>
+		<br><br>
+		<div style="width=600">
+		<label style="color:#e64626; font-size:30;">Some Images: </label><br>
+		<img class="slide" src="l1.jpg" style="width:600">
+		<img class="slide" src="l2.jpg" style="width:600">
+		<img class="slide" src="l3.jpg" style="width:600">
+		<img class="slide" src="l4.jpg" style="width:600">
+		<img class="slide" src="l5.jpg" style="width:600">
+		<img class="slide" src="l6.jpg" style="width:600">
+		<img class="slide" src="l7.jpg" style="width:600">
+		
+		<br><br><br>
+		</div>	
+	</center>
+		<a name="Bot">
+		<nav style="background-color:rgb(60, 29, 23); padding:30px;">
+			<label style="color:white;">----------   </label>
+			<label style="color:#e64626;">Call Now: </label>
+			<label style="color:white;">9988565964  --------</label>
+		</nav>
+		
+		<nav style="background-color:#e64626;padding:30px;">
+			<label style="color:white;">BABEL'S The Library</label><br>
+			<label style="color:white;">© 2023 by BABEL'S. Proudly created by GAGAN & HARSHIT</label>
+		</nav>
+</body>
+	<script>
+		var index=0;
+		slideshow();
+		function slideshow()
+		{
+			var i;
+			var x=document.getElementsByClassName("slide");
+			for(i=0; i<x.length;i++)
+			{
+				x[i].style.display="none";
+			}
+			index++;
+			if(index>x.length)
+			{	
+				index=1;
+			}
+			x[index-1].style.display="block";
+			setTimeout(slideshow,3000);
+		};
+	</script>

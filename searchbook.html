@@ -1,0 +1,80 @@
+<html>
+	<header>
+	<nav class="topnav">
+		LMS<sub>Library Management System</sub>
+		<a href="login.html" style="float:right; font-size:20;padding-right:50px;color:white">Logout</a>
+		<a href="home.html" style="float:right; font-size:20;padding-right:55px;color:white">Home</a>
+	</nav>
+	<link href="style.css" rel="stylesheet" />
+	</header>
+	<br><br><br><br><br><br>
+	<body>
+		
+			<ul class="librarian_navigation_list">
+					<li><a href="student_dashboard.html">Dashboard</a></li>
+					<li><a class="active"href="searchbook.html">Search a book</a></li>
+			</ul>
+		  <br><br>
+		  <br><br>
+		<form >
+			
+			<div>
+				
+				<h2>Search a Book</h2>
+				<br>
+				<input type=text placeholder="Subject name" id="bname" autofocus></input>
+				<br><br>
+					
+				<button type=button id="b1" onclick="delete1()">Search</button>
+				<br>
+				<label style="color:red">*Please enter the subject name in capital in capital</label>
+			</div>
+			</form>
+			<br><br>
+			<style>
+				table,td,tr,th
+				{border:2px solid black;
+				padding:15px;
+				border-spacing:4px;
+				border-collapse:collapse;
+				font-size:30;
+				}
+			</style>
+		<form style="padding-left:220px">
+			<div>
+			<table id="table">
+				
+			</table>
+			</div>
+		</form>
+		
+	</body>
+			 
+	<script>
+		function delete1(){
+			var bname=document.getElementById("bname").value;
+			var table=document.getElementById("table");
+			table.innerHTML="<th>Name</th><th>Author Name</th><th>Subject</th><th>Cost</th></tr>";
+			if(bname=="COMPUTER")
+				table.innerHTML= table.innerHTML+"	<tr><td>C++ by Pearson</td><td>Pearson</td><td>C++</td><td>480</td</tr>";
+			else if(bname=="MATHS")
+				table.innerHTML= table.innerHTML+"	<tr><td>MATHS by Pearson</td><td>Pearson</td><td>MATHS</td><td>500</td</tr>";
+
+			else if(bname=="PHYSICS")
+				table.innerHTML= table.innerHTML+"	<tr><td>PHYSICS by Pearson</td><td>Pearson</td><td>PHYSICS</td><td>230</td</tr>";
+			else if(bname=="CHEMISTRY")
+				table.innerHTML= table.innerHTML+"	<tr><td>CHEMISTRY by Pearson</td><td>Pearson</td><td>CHEMISTRY</td><td>630</td</tr>";
+			else if(bname=="BIOLOGY")
+				table.innerHTML= table.innerHTML+"	<tr><td>BIOLOGY by Pearson</td><td>Pearson</td><td>BIOLOGY</td><td>570</td</tr>";
+			else if(bname=="MECHANICS")
+				table.innerHTML= table.innerHTML+"	<tr><td>MECHANICS by Pearson</td><td>Pearson</td><td>MECHANICS</td><td>450</td</tr>";
+			else
+				window.alert("Book not available");
+		
+		
+		};
+	</script>
+</html>
+		
+		<br><br>
+	</body>

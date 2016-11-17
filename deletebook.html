@@ -1,0 +1,50 @@
+<html>
+	<header>
+	<nav class="topnav">
+		LMS<sub>Library Management System</sub>
+		<a href="login.html" style="float:right; font-size:20;padding-right:50px;color:white">Logout</a>
+		<a href="home.html" style="float:right; font-size:20;padding-right:55px;color:white">Home</a>
+	</nav>
+	<link href="style.css" rel="stylesheet" />
+	</header>
+	<br><br><br><br><br><br>
+	<body>
+		
+			<ul class="librarian_navigation_list">
+					<li><a href="librarian_dashboard.html">Dashboard</a></li>
+					<li><a href="status.html">Check Status of every book</a></li>
+					<li><a href="addnewbook.html">Add a new book</a></li>
+					<li><a class="active" href="deletebook.html">Delete a book</a></li>
+			</ul>
+		  <br><br>
+		  <br><br>
+		<form >
+			
+			<div>
+				
+				<h2>DELETE A BOOK</h2>
+				<br>
+				<input type=text placeholder="Book name" id="bname" autofocus></input>
+				<br><br>
+					
+				<button type=button id="b1" onclick="delete1()">Delete</button>
+				
+			</div>
+			
+		</form>
+	</body>
+			 
+	<script>
+		function delete1(){
+			var xmlhttp;
+			xmlhttp=new XMLHttpRequest();
+			xmlhttp.open("GET","deletebook.php?bname="+document.getElementById("bname").value,true);
+			xmlhttp.send(null);
+			window.alert("Your book have been deleted");
+			window.location.replace("deletebook.html");
+			};
+	</script>
+</html>
+		
+		<br><br>
+	</body>

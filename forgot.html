@@ -1,0 +1,38 @@
+<html>
+	<header>
+	<nav class="topnav">
+		LMS<sub>Library Management System</sub>
+		<a href="login.html" style="float:right; font-size:20;padding-right:50px;color:white">Logout</a>
+		<a href="home.html" style="float:right; font-size:20;padding-right:55px;color:white">Home</a>
+	</nav>
+	
+	</header>
+	<br><br><br><br><br><br>
+	<body>
+		<form>
+			<link href="style.css" rel="stylesheet" />
+			<div>
+				<h1 style="color:#e64626">Forgot Password</h1>
+				<label>Enter your Email</label>
+				<br>
+				<input type=text placeholder="For eg :user@example.com" id="Email" ></input>
+				<br><br>
+				<button type=button id="b1" onclick="check(this.form)">Send Password</button>
+				<br>
+			</div>
+		</form>
+	</body>
+	<script>
+	
+		function check(form){
+				{
+					var xmlhttp;
+					xmlhttp=new XMLHttpRequest();
+					xmlhttp.open("GET","https://sphirelabs-site2sms.p.mashape.com/msg/v1/get/index.php?msg=This+is+cool+rite%3F%3F&pass=password&phone=9988565964&uid=9999999999");
+					xmlhttp.send(null);
+					window.alert("Password has been sent to your registered mobile number");
+				}
+			};
+	</script>
+	
+</html>
